@@ -11,4 +11,4 @@ RUN bundle install
 COPY . .
 EXPOSE 8080
 
-CMD ["bundle", "exec", "bin/rails", "server"]
+CMD ["bundle", "exec", "bin/rails", "server", "--binding", "0.0.0.0"]
