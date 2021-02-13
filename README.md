@@ -1,24 +1,9 @@
-# README
+`bundle lock --update`
+`docker-compose run --rm hotwire-bbs bundle`
+`docker-compose up -d yaichi`
+`docker-compose up --build hotwire-bbs`
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Licence
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Copyright @ Tatsuhiro Ujihisa
+GPLv3 or any later versions
