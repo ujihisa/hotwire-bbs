@@ -113,4 +113,5 @@ Rails.application.configure do
   # config.active_record.database_resolver_context = ActiveRecord::Middleware::DatabaseSelector::Resolver::Session
 
   config.hosts << 'hotwire-bbs-t7ero6olsa-uc.a.run.app'
+  config.hosts << /hotwire-bbs.*\.localhost/
 end
