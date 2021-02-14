@@ -9,7 +9,7 @@ class Post
   private_constant :COL
 
   def self.all
-    COL.get.map {|x|
+    COL.order(:created_at, :desc).get.map {|x|
       new(
         id: x.document_id,
         name: x[:name],
