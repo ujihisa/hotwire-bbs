@@ -18,7 +18,11 @@
           <td><%= post.name %></td>
           <td><%= post.body %></td>
           <td><%= link_to 'Show', post_path(post.id) %></td>
-          <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <td>
+            <%= form_with(url: post_path(post.id), method: :delete, html: {onsubmit: 'return confirm("Do you really want to submit the form?");'}) do |form| %>
+              <%= form.submit 'Destroy' %>
+            <%- end %>
+          </td>
         </tr>
       <% end %>
     </tbody>

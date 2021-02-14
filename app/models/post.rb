@@ -53,6 +53,6 @@ class Post
   end
 
   def destroy
-    raise
+    COL.doc(@id).delete(exists: true)
   end
 end
