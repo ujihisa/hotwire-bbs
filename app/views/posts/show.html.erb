@@ -1,24 +1,26 @@
 <p id="notice"><%= notice %></p>
 
-<p>
+<%= turbo_frame_tag 'post' do %>
+  <p>
   <strong>Name:</strong>
   <%= @post.name %>
-</p>
+  </p>
 
-<p>
+  <p>
   <strong>Body:</strong>
   <%= @post.body %>
-</p>
+  </p>
 
-<p>
+  <p>
   <strong>Created at:</strong>
   <%= @post.created_at %>
-</p>
+  </p>
 
-<p>
+  <p>
   <strong>Updated at:</strong>
   <%= @post.updated_at %>
-</p>
+  </p>
 
-<%= link_to 'Edit', edit_post_path(@post.id) %> |
-<%= link_to 'Back', posts_path %>
+  <%= link_to 'Edit', edit_post_path(@post.id) %> |
+  <%= link_to 'Back', posts_path, 'data-turbo-frame': '_top' %>
+<% end %>

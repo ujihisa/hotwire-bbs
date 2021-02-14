@@ -12,7 +12,7 @@ class PostsController < ApplicationController
 
   # GET /posts/new
   def new
-    @post = Post.new
+    @post = Post.new(name: session[:post_name])
   end
 
   # GET /posts/1/edit
@@ -25,6 +25,8 @@ class PostsController < ApplicationController
 
     respond_to do |format|
       if @post.save
+        session[:post_name] = @post.name
+
         format.html { redirect_to @post, notice: "Post was successfully created." }
         format.json { render :show, status: :created, location: @post }
       else
