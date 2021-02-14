@@ -10,5 +10,15 @@
   <%= @post.body %>
 </p>
 
-<%= link_to 'Edit', edit_post_path(@post) %> |
+<p>
+  <strong>Created at:</strong>
+  <%= @post.created_at %>
+</p>
+
+<p>
+  <strong>Updated at:</strong>
+  <%= @post.updated_at %>
+</p>
+
+<%= link_to 'Edit', edit_post_path(@post.id) %> |
 <%= link_to 'Back', posts_path %>

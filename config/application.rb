@@ -31,5 +31,10 @@ module HotwireBbs
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
+
+    require 'google/cloud/firestore'
+    config.firestore = ::Google::Cloud::Firestore.new(
+      project_id: 'devs-sandbox',
+      **(File.exist?('devs-sandbox-5941dd8999bb.json') ? { credentials: 'devs-sandbox-5941dd8999bb.json' } : {}))
   end
 end
