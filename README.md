@@ -1,3 +1,6 @@
+`docker-compose up --build -d`
+`tail -f log/development.log`
+
 `bundle lock --update`
 `docker-compose run --rm hotwire-bbs bundle`
 `docker-compose up -d yaichi`

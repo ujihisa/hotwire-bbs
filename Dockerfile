@@ -9,6 +9,9 @@ COPY Gemfile Gemfile.lock ./
 RUN bundle install
 
 COPY . .
+
+RUN env SECRET_KEY_BASE=`bin/rake secret` bin/rake assets:precompile
+
 EXPOSE 8080
 
 CMD ["bundle", "exec", "bin/rails", "server", "--binding", "0.0.0.0"]

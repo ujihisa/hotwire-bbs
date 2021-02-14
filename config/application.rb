@@ -33,8 +33,18 @@ module HotwireBbs
     # config.eager_load_paths << Rails.root.join("extras")
 
     require 'google/cloud/firestore'
-    config.firestore = ::Google::Cloud::Firestore.new(
-      project_id: 'devs-sandbox',
-      **(File.exist?('devs-sandbox-5941dd8999bb.json') ? { credentials: 'devs-sandbox-5941dd8999bb.json' } : {}))
+    if File.exist?('devs-sandbox-5941dd8999bb.json')
+      config.firestore = ::Google::Cloud::Firestore.new(
+        project_id: 'devs-sandbox',
+        credentials: 'devs-sandbox-5941dd8999bb.json',
+      )
+    elsif ENV['CREDENTIALS_JSON']
+      config.firestore = ::Google::Cloud::Firestore.new(
+        project_id: 'devs-sandbox',
+        credentials: JSON.parse(ENV['CREDENTIALS_JSON']),
+      )
+    else
+      # It's likely asset:precompile. Simply ignore that.
+    end
   end
 end
