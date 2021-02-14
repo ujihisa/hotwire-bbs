@@ -33,19 +33,24 @@ class Post
 
   def save
     return false if invalid?
+
     if @id
+      @updated_at = Time.now
+
       COL.doc(@id).set({
         name: @name,
         body: @body,
         created_at: @created_at,
-        updated_at: Time.now,
+        updated_at: @updated_at,
       })
     else
+      @created_at = @updated_at = Time.now
+
       dr = COL.add({
         name: @name,
         body: @body,
-        created_at: Time.now,
-        updated_at: Time.now,
+        created_at: @created_at,
+        updated_at: @updated_at,
       })
       @id = dr.document_id
     end

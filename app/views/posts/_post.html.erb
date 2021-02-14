@@ -1,20 +1,15 @@
-<p>
-<strong>Name:</strong>
-<%= @post.name %>
-</p>
-
-<p>
-<strong>Body:</strong>
-<%= @post.body %>
-</p>
-
-<p>
-<strong>Created at:</strong>
-<%= @post.created_at %>
-</p>
-
-<p>
-<strong>Updated at:</strong>
-<%= @post.updated_at %>
-</p>
-<%= link_to 'Edit (Clone?)', edit_post_path(@post.id) %>
+<tr>
+  <td><%= post.name %></td>
+  <td><%= post.body %></td>
+  <td>
+    <small><%= post.created_at.in_time_zone('America/Vancouver') %></small>
+  </td>
+  <td>
+    <%= link_to 'Edit (Clone?)', edit_post_path(post.id) %>
+  </td>
+  <td>
+    <%= form_with(url: post_path(post.id), method: :delete, html: {onsubmit: 'return confirm("Do you really want to submit the form?");'}) do |form| %>
+      <%= form.submit 'Destroy' %>
+    <%- end %>
+  </td>
+</tr>
