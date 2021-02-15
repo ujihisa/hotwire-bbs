@@ -57,6 +57,12 @@ class Post
     true
   end
 
+  def update(post_params)
+    @name = post_params[:name]
+    @body = post_params[:body]
+    save
+  end
+
   def destroy
     COL.doc(@id).delete(exists: true)
   end

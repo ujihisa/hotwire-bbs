@@ -1,7 +1,13 @@
 <h1>Editing Post</h1>
 
 <%= turbo_frame_tag 'post' do %>
-  <%= render 'form', post: @post %>
+  <%= form_with(url: post_path(@post.id), model: @post, method: :put) do |form| %>
+    <%= render 'form', post: @post, form: form %>
+
+    <div class="actions">
+      <%= form.submit 'Update' %>
+    </div>
+  <% end %>
 <% end %>
 
 <%= link_to 'Show', @post %> |
