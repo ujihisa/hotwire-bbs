@@ -13,13 +13,13 @@
 <% if post.id %>
   <%= form.text_field :name, readonly: true %>
 <% else %>
-  <div class="field">
+  <div class="field mb-3">
     <%= form.label :name %>
     <%= form.text_field :name %>
   </div>
 <% end %>
 
-<div class="field">
+<div class="field mb-3">
   <%= form.label :body %>
   <%= form.text_area :body %>
 </div>

@@ -7,14 +7,23 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag 'application', media: 'all' %>
+    <%= stylesheet_link_tag 'https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css', media: 'all' %>
     <%= stimulus_include_tags %>
     <%= javascript_include_tag "turbo", type: "module-shim" %>
+    <%= javascript_include_tag 'https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/js/bootstrap.min.js' %>
     <%= yield :head %>
   </head>
 
   <body>
-    <%= $i ||= 0; $i += 1 %>
-    <%= yield %>
-    <%= link_to 'Home', root_path %>
+    <div class="container">
+      <h1>
+        Hotwire BBS
+        <span class="badge bg-secondary">Rails <%= Rails.version %></span>
+      </h1>
+
+      <%= $i ||= 0; $i += 1 %>
+      <%= yield %>
+      <%= link_to 'Home', root_path %>
+    </div>
   </body>
 </html>

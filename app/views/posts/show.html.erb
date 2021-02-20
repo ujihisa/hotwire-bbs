@@ -1,6 +1,7 @@
 <p id="notice"><%= notice %></p>
 
-<%= turbo_frame_tag 'post', target: '_top' do %>
+<%= turbo_frame_tag 'post' do %>
   <%= render @post %>
 <% end %>
+
 <%= link_to 'Back', posts_path, 'data-turbo-frame': '_top' %>

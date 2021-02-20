@@ -4,7 +4,7 @@
   <%= form_with(url: posts_path, model: @post, method: :post) do |form| %>
     <%= render 'form', post: @post, form: form %>
 
-    <div class="actions">
+    <div class="actions mb-3">
       <%= form.submit 'Create' %>
     </div>
   <% end %>
