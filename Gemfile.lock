@@ -194,7 +194,7 @@ GEM
       ffi (~> 1.0)
     rbtree (0.4.4)
     redis (4.2.5)
-    regexp_parser (2.0.3)
+    regexp_parser (2.1.0)
     ruby2_keywords (0.0.4)
     rubyzip (2.3.0)
     sass-rails (6.0.0)
