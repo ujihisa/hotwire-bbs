@@ -33,12 +33,12 @@ module HotwireBbs
     # config.eager_load_paths << Rails.root.join("extras")
 
     require 'google/cloud/firestore'
-    if File.exist?('devs-sandbox-5941dd8999bb.json')
-      config.firestore = ::Google::Cloud::Firestore.new(
-        project_id: 'devs-sandbox',
-        credentials: 'devs-sandbox-5941dd8999bb.json',
-      )
-    elsif ENV['CREDENTIALS_JSON']
+    # if File.exist?('devs-sandbox-5941dd8999bb.json')
+    #   config.firestore = ::Google::Cloud::Firestore.new(
+    #     project_id: 'devs-sandbox',
+    #     credentials: 'devs-sandbox-5941dd8999bb.json',
+    #   )
+    if ENV['CREDENTIALS_JSON']
       config.firestore = ::Google::Cloud::Firestore.new(
         project_id: 'devs-sandbox',
         credentials: JSON.parse(ENV['CREDENTIALS_JSON']),
