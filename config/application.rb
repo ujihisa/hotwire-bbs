@@ -45,6 +45,11 @@ module HotwireBbs
       )
     else
       # It's likely asset:precompile. Simply ignore that.
+      # Use emulator
+      ENV['FIRESTORE_EMULATOR_HOST'] = "firestore-emulator:8080"
+      config.firestore = ::Google::Cloud::Firestore.new(
+        project_id: 'devs-sandbox',
+      )
     end
   end
 end
