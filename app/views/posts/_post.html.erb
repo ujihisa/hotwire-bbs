@@ -8,7 +8,7 @@
     <small><%= post.updated_at.in_time_zone('America/Vancouver') if post.created_at.to_i != post.updated_at.to_i %></small>
   </td>
   <td>
-    <%= link_to('Edit', edit_post_path(post.id)) if session[:post_name] == post.name %>
+    <%= link_to('Edit', edit_post_path(post.id), 'data-turbo-frame': 'input_post') if session[:post_name] == post.name %>
   </td>
   <td>
     <%= form_with(url: post_path(post.id), method: :delete) do |form| %>

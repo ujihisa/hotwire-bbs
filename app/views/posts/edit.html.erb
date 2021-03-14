@@ -1,12 +1,17 @@
-<h1>Editing Post</h1>
+<%= turbo_frame_tag 'input_post' do %>
+  <h2>
+    Editing Post
+    <code><%= @post.id %></code>
+  </h2>
 
-<%= turbo_frame_tag 'post' do %>
   <%= form_with(url: post_path(@post.id), model: @post, method: :put) do |form| %>
     <%= render 'form', post: @post, form: form %>
 
     <div class="actions mb-3">
       <%= form.submit 'Update' %>
     </div>
+
+    Originally created at <%= @post.created_at.in_time_zone('America/Vancouver') %>
   <% end %>
 <% end %>
 

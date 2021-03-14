@@ -27,8 +27,8 @@ class PostsController < ApplicationController
       if @post.save
         session[:post_name] = @post.name
 
-        format.turbo_stream
-        format.html { redirect_to new_post_path, notice: "Post was successfully created." }
+        format.turbo_stream { render :create }
+        format.html { redirect_to new_post_path, notice: 'Post was successfully created.' }
         format.json { render :show, status: :created, location: @post }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -41,7 +41,8 @@ class PostsController < ApplicationController
   def update
     respond_to do |format|
       if @post.update(post_params)
-        format.html { redirect_to posts_path, notice: "Post was successfully updated." }
+        format.turbo_stream { render :update }
+        format.html { redirect_to posts_path, notice: 'Post was successfully updated.' }
         format.json { render :show, status: :ok, location: @post }
       else
         format.html { render :edit, status: :unprocessable_entity }
