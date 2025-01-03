@@ -69,23 +69,11 @@ GEM
     addressable (2.8.1)
       public_suffix (>= 2.0.2, < 6.0)
     bindex (0.8.1)
-<<<<<<< HEAD
-    bootsnap (1.16.0)
-||||||| parent of 3d9b23d (`bundle lock --update --conservative`)
-    bootsnap (1.13.0)
-=======
     bootsnap (1.18.4)
->>>>>>> 3d9b23d (`bundle lock --update --conservative`)
       msgpack (~> 1.2)
     builder (3.2.4)
     byebug (11.1.3)
-<<<<<<< HEAD
-    capybara (3.38.0)
-||||||| parent of 3d9b23d (`bundle lock --update --conservative`)
-    capybara (3.37.1)
-=======
     capybara (3.40.0)
->>>>>>> 3d9b23d (`bundle lock --update --conservative`)
       addressable
       matrix
       mini_mime (>= 0.1.3)
@@ -94,14 +82,7 @@ GEM
       rack-test (>= 0.6.3)
       regexp_parser (>= 1.5, < 3.0)
       xpath (~> 3.2)
-<<<<<<< HEAD
     concurrent-ruby (1.2.0)
-||||||| parent of 3d9b23d (`bundle lock --update --conservative`)
-    childprocess (4.1.0)
-    concurrent-ruby (1.1.10)
-=======
-    concurrent-ruby (1.1.10)
->>>>>>> 3d9b23d (`bundle lock --update --conservative`)
     crass (1.0.6)
     date (3.3.3)
     erubi (1.12.0)
@@ -128,13 +109,7 @@ GEM
     google-cloud-env (1.6.0)
       faraday (>= 0.17.3, < 3.0)
     google-cloud-errors (1.3.0)
-<<<<<<< HEAD
-    google-cloud-firestore (2.9.1)
-||||||| parent of 3d9b23d (`bundle lock --update --conservative`)
-    google-cloud-firestore (2.7.2)
-=======
     google-cloud-firestore (2.10.1)
->>>>>>> 3d9b23d (`bundle lock --update --conservative`)
       concurrent-ruby (~> 1.0)
       google-cloud-core (~> 1.5)
       google-cloud-firestore-v1 (~> 0.8)
@@ -172,16 +147,8 @@ GEM
     jbuilder (2.13.0)
       actionview (>= 5.0.0)
       activesupport (>= 5.0.0)
-<<<<<<< HEAD
     jwt (2.7.0)
-    listen (3.8.0)
-||||||| parent of 3d9b23d (`bundle lock --update --conservative`)
-    jwt (2.5.0)
-    listen (3.7.1)
-=======
-    jwt (2.5.0)
     listen (3.9.0)
->>>>>>> 3d9b23d (`bundle lock --update --conservative`)
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
     loofah (2.19.1)
@@ -213,16 +180,8 @@ GEM
     nokogiri (1.14.1-x86_64-linux)
       racc (~> 1.4)
     os (1.1.4)
-<<<<<<< HEAD
     public_suffix (5.0.1)
-    puma (5.6.5)
-||||||| parent of 3d9b23d (`bundle lock --update --conservative`)
-    public_suffix (5.0.0)
-    puma (5.6.5)
-=======
-    public_suffix (5.0.0)
     puma (5.6.9)
->>>>>>> 3d9b23d (`bundle lock --update --conservative`)
       nio4r (~> 2.0)
     racc (1.6.2)
     rack (2.2.6.2)
@@ -258,19 +217,9 @@ GEM
     rb-fsevent (0.11.2)
     rb-inotify (0.10.1)
       ffi (~> 1.0)
-<<<<<<< HEAD
     rbtree (0.4.6)
-    redis (4.8.0)
-    regexp_parser (2.6.2)
-||||||| parent of 3d9b23d (`bundle lock --update --conservative`)
-    rbtree (0.4.5)
-    redis (4.8.0)
-    regexp_parser (2.6.0)
-=======
-    rbtree (0.4.5)
     redis (4.8.1)
-    regexp_parser (2.6.0)
->>>>>>> 3d9b23d (`bundle lock --update --conservative`)
+    regexp_parser (2.6.2)
     rexml (3.2.5)
     ruby2_keywords (0.0.5)
     rubyzip (2.3.2)
@@ -284,14 +233,7 @@ GEM
       sprockets (> 3.0)
       sprockets-rails
       tilt
-<<<<<<< HEAD
-    selenium-webdriver (4.8.0)
-||||||| parent of 3d9b23d (`bundle lock --update --conservative`)
-    selenium-webdriver (4.5.0)
-      childprocess (>= 0.5, < 5.0)
-=======
     selenium-webdriver (4.10.0)
->>>>>>> 3d9b23d (`bundle lock --update --conservative`)
       rexml (~> 3.2, >= 3.2.5)
       rubyzip (>= 1.2.2, < 3.0)
       websocket (~> 1.0)
@@ -300,16 +242,8 @@ GEM
       faraday (>= 0.17.5, < 3.a)
       jwt (>= 1.5, < 3.0)
       multi_json (~> 1.10)
-<<<<<<< HEAD
-    spring (4.1.1)
-    sprockets (4.2.0)
-||||||| parent of 3d9b23d (`bundle lock --update --conservative`)
-    spring (4.1.0)
-    sprockets (4.1.1)
-=======
     spring (4.2.1)
-    sprockets (4.1.1)
->>>>>>> 3d9b23d (`bundle lock --update --conservative`)
+    sprockets (4.2.0)
       concurrent-ruby (~> 1.0)
       rack (>= 2.2.4, < 4)
     sprockets-rails (3.4.2)
