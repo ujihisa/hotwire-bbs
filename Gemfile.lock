@@ -290,7 +290,7 @@ DEPENDENCIES
   jbuilder (~> 2.7)
   listen (~> 3.3)
   puma (~> 5.0)
-  rails
+  rails (<= 7.1)
   redis (~> 4.0)
   sass-rails (>= 6)
   selenium-webdriver
